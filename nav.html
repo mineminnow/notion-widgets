@@ -59,15 +59,16 @@
 
 	<nav class="navMenu  border">
 		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-
-
+		<a id="shopping-list" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i> Shopping List</a>
+		<a id="recipes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-pot-food"></i> Recipes</a>
+		<a id="archive" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-box-archive"></i> Archive</a>
 
 	</nav>
 
 
 	<script>
 
-		let direction = "horizontal";
+		let direction = "vertical";
 		if (direction === "vertical") {
 			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
 		}
@@ -77,6 +78,12 @@
 
 			if (id == 'home')
 				window.open("https://www.notion.so/famalamalam/Dashboard-72269223fe2044c18f55a4a3576408c6?pvs=4", '_blank').focus();
+			else if (id == 'shopping-list')
+				window.open("https://www.notion.so/famalamalam/Shopping-List-9cf65ea62a1c4896bb86d034ac10479e?pvs=4", '_blank').focus();
+			else if (id == 'recipes')
+				window.open("https://www.notion.so/famalamalam/Recipes-d192c52ea43c4ce0b75c4ece5639c378?pvs=4", '_blank').focus();
+			else if (id == 'archive')
+				window.open("https://www.notion.so/famalamalam/Archive-0bafc83c40ca424d8f846209021ace06?pvs=4", '_blank').focus();
 
 		}
 	</script>
