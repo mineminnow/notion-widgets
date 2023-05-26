@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
 
         .widget {
             padding: 5px 5px ;
-            color: #FFFFFF;
+            color: #000000;
             text-align: center;
                 max-width: 95%;
             margin: auto;
@@ -24,14 +23,14 @@
              min-height: 100px;
 
             background:
-                linear-gradient(to right, white 4px, transparent 4px) 0 0,
-                linear-gradient(to right, white 4px, transparent 4px) 0 100%,
-                linear-gradient(to left, white 4px, transparent 4px) 100% 0,
-                linear-gradient(to left, white 4px, transparent 4px) 100% 100%,
-                linear-gradient(to bottom, white 4px, transparent 4px) 0 0,
-                linear-gradient(to bottom, white 4px, transparent 4px) 100% 0,
-                linear-gradient(to top, white 4px, transparent 4px) 0 100%,
-                linear-gradient(to top, white 4px, transparent 4px) 100% 100%;
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
 
             background-repeat: no-repeat;
             background-size: 20px 20px;
@@ -54,12 +53,13 @@ quotes=[
 "So, if you think you are standing firm, be careful that you don't fall!<br>(1 Corinthians 10:12)",
 "So whether you eat or drink or whatever you do, do it all for the glory of God.<br>(1 Corinthians 10:31)",
 "For as woman came from man, so also man is born of woman. But everything comes from God.<br>(1 Corinthians 11:12)",
-"7"
+"7",
 ];
 
-const INTERVAL = 86400000;
+// const INTERVAL = 86400000;
+const INTERVAL = 2000
 
-function dispalyQuote(){
+function displayQuote(){
 
     document.getElementById('widget').innerHTML =quotes[0];
     quotes.forEach((quote, i) => {
@@ -69,11 +69,11 @@ function dispalyQuote(){
     });
     }
 
-    function dispalyWidget() {
-        dispalyQuote();
-        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    function displayWidget() {
+        displayQuote();
+        setTimeout(displayWidget, quotes.length*INTERVAL);
     }
-    dispalyWidget()
+    displayWidget()
 
 </script>
 
